@@ -1,0 +1,37 @@
+{
+  "properties": {
+    "archived": {
+      "title": "Release has been archived",
+      "description": "Release has been archived",
+      "type": "bool"
+    }
+  },
+  "definitions": {
+    "Organization": {
+      "properties": {
+        "contactPoint":  {
+          "description": "Human point of contact for Organization",
+          "type": "string",
+        }
+      },
+      "properties": {
+        "compranetStatus":  {
+          "description": "Supplier Status",
+          "type": "string",
+        }
+      }
+    },
+    "Contract": {
+      "properties": {
+        "hasAmendments":  {
+          "description": "?",
+          "type": "bool",
+        },
+        "framework":  {
+          "description": "?",
+          "type": "bool",
+        }
+      }
+    }
+  }
+}

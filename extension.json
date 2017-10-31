@@ -1,0 +1,17 @@
+{
+  "name": {
+    "en" : "COMPRANET OCDS"
+   },
+  "description": {
+    "en": "Extension for values in COMPRANET as yet unavailable in OCDS"
+   },
+  "documentationUrl": {
+    "en": "https://github.com/ProjectPODER/ocds_compranet_extension/README.md"
+   },
+  "compatibility": ">=1.1.0",
+  "dependencies": [
+    "https://github.com/open-contracting/ocds_partyDetails_scale_extension",
+    "https://github.com/open-contracting/ocds_budget_breakdown_extension",
+    "https://github.com/open-contracting/ocds_multiple_buyers_extension",
+  ]
+}
