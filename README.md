@@ -1,5 +1,1 @@
-# compranet => ocds
-
-Extend release to include fields available in COMPRANET but not yet provided by OCDS core or extensions.
-
-*Currently a skeleton, **come back soon!***
+Extension for values in COMPRANET as yet unavailable in OCDS. All extended fields are named with the "MxCnet" suffix. This extension is needed to not drop any value and to avoid reducing the accuracy in some cases where the OCDS standard has a reduced closed vocabulary and Compranet has more variants.

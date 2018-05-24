@@ -1,17 +1,17 @@
 {
   "name": {
-    "en" : "COMPRANET OCDS"
-   },
+    "en": "ocds_compranet_extension"
+  },
   "description": {
-    "en": "Extension for values in COMPRANET as yet unavailable in OCDS"
-   },
+    "en": "Extension for values in COMPRANET as yet unavailable in OCDS. All extended fields are named with the \"MxCnet\" suffix. This extension is needed to not drop any value and to avoid reducing the accuracy in some cases where the OCDS standard has a reduced closed vocabulary and Compranet has more variants."
+  },
   "documentationUrl": {
     "en": "https://github.com/ProjectPODER/ocds_compranet_extension/README.md"
-   },
-  "compatibility": ">=1.1.0",
+  },
   "dependencies": [
-    "https://github.com/open-contracting/ocds_partyDetails_scale_extension",
-    "https://github.com/open-contracting/ocds_budget_breakdown_extension",
-    "https://github.com/open-contracting/ocds_multiple_buyers_extension",
-  ]
+    "https://raw.githubusercontent.com/open-contracting/ocds_budget_breakdown_extension/master/extension.json",
+    "https://raw.githubusercontent.com/open-contracting/ocds_multiple_buyers_extension/master/extension.json",
+    "https://raw.githubusercontent.com/open-contracting/ocds_partyDetails_scale_extension/master/extension.json",
+    "https://raw.githubusercontent.com/open-contracting/ocds_process_title_extension/v1.1.1/extension.json"
+  ],
 }

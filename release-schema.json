@@ -1,37 +1,63 @@
 {
-  "properties": {
-    "archived": {
-      "title": "Release has been archived",
-      "description": "Release has been archived",
-      "type": "bool"
-    }
-  },
-  "definitions": {
-    "Organization": {
-      "properties": {
-        "contactPoint":  {
-          "description": "Human point of contact for Organization",
-          "type": "string",
+  "releases": [
+    {
+      "buyer": {
+        "consolidatedProcessMxCnet": {
+          "title": "Consolidated Process",
+          "description": "Consolidated Process in COMPRANET México. Identifica si el contrato del procedimiento deriva de una compra consolidada.",
+          "type": "bool"
         }
       },
-      "properties": {
-        "compranetStatus":  {
-          "description": "Supplier Status",
-          "type": "string",
-        }
-      }
-    },
-    "Contract": {
-      "properties": {
-        "hasAmendments":  {
-          "description": "?",
-          "type": "bool",
+      "tender": {
+        "procurementMethodMxCnet": {
+          "title": "Procurement Method",
+          "description": "Procurement Method in COMPRANET México. De acuerdo al tipo de Procedimiento que realizara la UC",
+          "type": "string"
         },
-        "framework":  {
-          "description": "?",
-          "type": "bool",
+        "procurementMethodCharacterMxCnet": {
+          "title": "Procurement character",
+          "description": "Procurement character in COMPRANET México. Indica el carácter del procedimiento.",
+          "type": "string"
+        },
+        "procurementMethodDetailsTemplateMxCnet": {
+          "title": "Procuremnt Method Details",
+          "description": "Procuremnt Method Details in COMPRANET México. Indica la plantilla seleccionada por el operador de la Unidad Compradora al crear el Expediente y corresponde al tipo de contratación que se realiza.",
+          "type": "string"
+        },
+        "awardCriteriaDetailsScaleDetailsMxCnet": {
+          "title": "Award Criteria Details Scale",
+          "description": "Award Criteria Details Scale in COMPRANET México. Estratificación manifestada por la unidad compradora a la fecha de emisión del reporte.",
+          "type": "array, string"
+        },
+        "contractPeriod": {
+          "multiyearContractMxCnet": {
+            "title": "Multiyear Contract",
+            "description": "Multiyear Contract in COMPRANET México. Indica si el contrato del procedimiento fue firmado abarcando más de un ejercicio fiscal.",
+            "type": "bool"
+          }
         }
-      }
+      },
+      "contracts": [
+        {
+          "statusMxCnet": {
+            "title": "Contract Status",
+            "description": "Contract Status in COMPRANET México. Activo: Estado que adquiere el contrato en CompraNet durante la vigencia del mismo. Terminado: Es el estado adquirido por el contrato cuando la Unidad Compradora realiza alguna de las siguientes acciones: cancelar o rescindir el mismo antes de la fecha de expiración. Expirado: Estado habilitado automáticamente por el sistema cuando ha concluido la vigencia del contrato.",
+            "type": "string"
+          },
+          "period": {
+            "multiyearContractMxCnet": {
+              "title": "Multiyear Contract",
+              "description": "Multiyear Contract in COMPRANET México. Indica si el contrato del procedimiento fue firmado abarcando más de un ejercicio fiscal.",
+              "type": "bool"
+            }
+          },
+          "filedMxCnet": {
+              "title": "Filed contract",
+              "description": "Filed contract in COMPRANET México. Estado de clasificación del sistema que indica si el elemento electrónico que contiene los datos relevantes del contrato ha sido archivado en el sistema. Lo anterior no tiene impacto en la difusión pública de la información que se reporta.",
+              "type": "bool"
+          }
+        }
+      ]
     }
-  }
+  ]
 }
