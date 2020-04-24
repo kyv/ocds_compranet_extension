@@ -4,56 +4,80 @@
       "buyer": {
         "consolidatedProcessMxCnet": {
           "title": "Consolidated Process",
-          "description": "Consolidated Process in COMPRANET México. Identifica si el contrato del procedimiento deriva de una compra consolidada.",
+          "description": "Consolidated Process in COMPRANET México. Identifies whether the contract is part of a consolidated purchase.",
           "type": "bool"
+        }
+      },
+      "parties": {
+        "details": {
+          "govLevel": {
+            "title": "Government Level",
+            "description": "The government level of the buyer party. Can be one of: country, region, or city.",
+            "type": "string"
+          },
+          "scaleReportedByBuyerMxCnet": {
+            "title": "Scale Reported by Buyer",
+            "description": "Supplier party scale as reported by the buyer. Can be one of: No MIPYME, Mediana, Pequeña, or Micro.",
+            "type": "string"
+          },
+          "scaleReportedBySupplierMxCnet": {
+            "title": "Scale Reported by Supplier",
+            "description": "Supplier party scale as reported by the supplier itself. Can be one of: No MIPYME, Mediana, Pequeña, or Micro.",
+            "type": "string"
+          }
         }
       },
       "tender": {
         "procurementMethodMxCnet": {
           "title": "Procurement Method",
-          "description": "Procurement Method in COMPRANET México. De acuerdo al tipo de Procedimiento que realizara la UC",
+          "description": "Procurement Method in COMPRANET México. Identifies the procurement method used by the buyer.",
           "type": "string"
         },
         "procurementMethodCharacterMxCnet": {
           "title": "Procurement character",
-          "description": "Procurement character in COMPRANET México. Indica el carácter del procedimiento.",
+          "description": "Procurement character in COMPRANET México. Indicates the character of the procurement method used by the buyer.",
           "type": "string"
         },
         "procurementMethodDetailsTemplateMxCnet": {
           "title": "Procuremnt Method Details",
-          "description": "Procuremnt Method Details in COMPRANET México. Indica la plantilla seleccionada por el operador de la Unidad Compradora al crear el Expediente y corresponde al tipo de contratación que se realiza.",
+          "description": "Procuremnt Method Details in COMPRANET México. Indicates the template selected by the buyer's contact point while creating the contracting process and corresponds to the procurement method being used.",
           "type": "string"
-        },
-        "awardCriteriaDetailsScaleDetailsMxCnet": {
-          "title": "Award Criteria Details Scale",
-          "description": "Award Criteria Details Scale in COMPRANET México. Estratificación manifestada por la unidad compradora a la fecha de emisión del reporte.",
-          "type": "array, string"
         },
         "contractPeriod": {
           "multiyearContractMxCnet": {
             "title": "Multiyear Contract",
-            "description": "Multiyear Contract in COMPRANET México. Indica si el contrato del procedimiento fue firmado abarcando más de un ejercicio fiscal.",
+            "description": "Multiyear Contract in COMPRANET México. Indicates whether a contract spans more than one fiscal period.",
             "type": "bool"
           }
         }
       },
       "contracts": [
         {
+          "hasFramework": {
+            "title": "Contract Framework Existence",
+            "description": "Indicates whether a Contract Framework is used in a specific contract. Contract Frameworks are a strategy through which buyers reach an agreement with one or many providers, where technical and quality specifications, scopes, prices and conditions are established to regulate the acquisition or leasing of properties, or the provision of services.",
+            "type": "bool"
+          },
+          "framework": {
+            "title": "Contract Framework",
+            "description": "Textual reference of the Contract Framework to which a specific contract is linked.",
+            "type": "string"
+          },
           "statusMxCnet": {
             "title": "Contract Status",
-            "description": "Contract Status in COMPRANET México. Activo: Estado que adquiere el contrato en CompraNet durante la vigencia del mismo. Terminado: Es el estado adquirido por el contrato cuando la Unidad Compradora realiza alguna de las siguientes acciones: cancelar o rescindir el mismo antes de la fecha de expiración. Expirado: Estado habilitado automáticamente por el sistema cuando ha concluido la vigencia del contrato.",
+            "description": "Contract Status in COMPRANET México. Activo: state of the contract while it is being executed. Terminado: state of the contract when the buyer cancels or rescinds the contract before its end date. Expirado: state of the contract when its end date has been reached.",
             "type": "string"
           },
           "period": {
             "multiyearContractMxCnet": {
               "title": "Multiyear Contract",
-              "description": "Multiyear Contract in COMPRANET México. Indica si el contrato del procedimiento fue firmado abarcando más de un ejercicio fiscal.",
+              "description": "Multiyear Contract in COMPRANET México. Indicates whether a contract spans more than one fiscal period.",
               "type": "bool"
             }
           },
           "filedMxCnet": {
               "title": "Filed contract",
-              "description": "Filed contract in COMPRANET México. Estado de clasificación del sistema que indica si el elemento electrónico que contiene los datos relevantes del contrato ha sido archivado en el sistema. Lo anterior no tiene impacto en la difusión pública de la información que se reporta.",
+              "description": "Filed contract in COMPRANET México. Classification state that indicates if the electronic element that contains the relevant contract data has been filed inside the system. This has no impact on publishing of the information being reported.",
               "type": "bool"
           }
         }
